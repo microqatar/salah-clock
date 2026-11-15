@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Salah Clock</string>
+    <string name="admin_title">Admin Panel</string>
+    <string name="footer_hint">Long-press anywhere for admin panel</string>
+</resources>

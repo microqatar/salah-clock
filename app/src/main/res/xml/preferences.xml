@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="📍 Location" app:iconSpaceReserved="false">
+        <ListPreference
+            app:key="location_mode"
+            app:title="Location source"
+            app:entries="@array/location_mode_entries"
+            app:entryValues="@array/location_mode_values"
+            app:defaultValue="auto"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <Preference
+            app:key="city_search"
+            app:title="Search city (sets manual location)"
+            app:iconSpaceReserved="false" />
+        <Preference
+            app:key="use_device_location"
+            app:title="Switch back to device location"
+            app:iconSpaceReserved="false" />
+        <EditTextPreference
+            app:key="manual_city"
+            app:title="Location display name"
+            app:defaultValue=""
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <EditTextPreference
+            app:key="manual_lat"
+            app:title="Manual latitude"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <EditTextPreference
+            app:key="manual_lon"
+            app:title="Manual longitude"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="🕌 Prayer calculation" app:iconSpaceReserved="false">
+        <ListPreference
+            app:key="madhab"
+            app:title="Madhab (Asr time)"
+            app:entries="@array/madhab_entries"
+            app:entryValues="@array/madhab_values"
+            app:defaultValue="shafii"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <ListPreference
+            app:key="calc_method"
+            app:title="Calculation method (Fajr / Isha)"
+            app:entries="@array/method_entries"
+            app:entryValues="@array/method_values"
+            app:defaultValue="auto"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <ListPreference
+            app:key="hijri_offset"
+            app:title="Hijri date adjustment"
+            app:entries="@array/hijri_offset_entries"
+            app:entryValues="@array/hijri_offset_values"
+            app:defaultValue="0"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="⏱ Minute adjustments (+/−)" app:iconSpaceReserved="false">
+        <EditTextPreference app:key="adj_fajr" app:title="Fajr" app:defaultValue="0" app:useSimpleSummaryProvider="true" app:iconSpaceReserved="false" />
+        <EditTextPreference app:key="adj_sunrise" app:title="Sunrise" app:defaultValue="0" app:useSimpleSummaryProvider="true" app:iconSpaceReserved="false" />
+        <EditTextPreference app:key="adj_dhuhr" app:title="Dhuhr" app:defaultValue="0" app:useSimpleSummaryProvider="true" app:iconSpaceReserved="false" />
+        <EditTextPreference app:key="adj_asr" app:title="Asr" app:defaultValue="0" app:useSimpleSummaryProvider="true" app:iconSpaceReserved="false" />
+        <EditTextPreference app:key="adj_maghrib" app:title="Maghrib" app:defaultValue="0" app:useSimpleSummaryProvider="true" app:iconSpaceReserved="false" />
+        <EditTextPreference app:key="adj_isha" app:title="Isha" app:defaultValue="0" app:useSimpleSummaryProvider="true" app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="🔊 Azan" app:iconSpaceReserved="false">
+        <SwitchPreferenceCompat app:key="azan_enabled" app:title="Play azan at prayer times" app:defaultValue="true" app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat app:key="azan_fajr" app:title="Fajr" app:defaultValue="true" app:dependency="azan_enabled" app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat app:key="azan_dhuhr" app:title="Dhuhr / Jumu'ah" app:defaultValue="true" app:dependency="azan_enabled" app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat app:key="azan_asr" app:title="Asr" app:defaultValue="true" app:dependency="azan_enabled" app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat app:key="azan_maghrib" app:title="Maghrib" app:defaultValue="true" app:dependency="azan_enabled" app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat app:key="azan_isha" app:title="Isha" app:defaultValue="true" app:dependency="azan_enabled" app:iconSpaceReserved="false" />
+        <SeekBarPreference
+            app:key="azan_volume"
+            app:title="Azan volume"
+            app:min="0"
+            android:max="100"
+            app:defaultValue="100"
+            app:showSeekBarValue="true"
+            app:iconSpaceReserved="false" />
+        <Preference app:key="pick_azan_sound" app:title="Azan sound (choose audio file)" app:iconSpaceReserved="false" />
+        <Preference app:key="pick_fajr_sound" app:title="Fajr azan sound (optional)" app:iconSpaceReserved="false" />
+        <Preference app:key="reset_azan_sound" app:title="Reset sounds to default" app:iconSpaceReserved="false" />
+        <Preference app:key="test_azan" app:title="▶ Test azan" app:iconSpaceReserved="false" />
+        <Preference app:key="test_fajr_azan" app:title="▶ Test Fajr azan" app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="🖥 Display" app:iconSpaceReserved="false">
+        <ListPreference
+            app:key="clock_style"
+            app:title="Clock style"
+            app:entries="@array/clock_style_entries"
+            app:entryValues="@array/clock_style_values"
+            app:defaultValue="both"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat app:key="use_24h" app:title="24-hour time" app:defaultValue="false" app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat app:key="show_seconds" app:title="Show seconds" app:defaultValue="true" app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat app:key="show_weather" app:title="Show weather" app:defaultValue="true" app:iconSpaceReserved="false" />
+        <ListPreference
+            app:key="temp_unit"
+            app:title="Temperature unit"
+            app:entries="@array/temp_unit_entries"
+            app:entryValues="@array/temp_unit_values"
+            app:defaultValue="c"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <ListPreference
+            app:key="bg_theme"
+            app:title="Background"
+            app:entries="@array/bg_entries"
+            app:entryValues="@array/bg_values"
+            app:defaultValue="midnight"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <ListPreference
+            app:key="accent_color"
+            app:title="Accent colour"
+            app:entries="@array/accent_entries"
+            app:entryValues="@array/accent_values"
+            app:defaultValue="gold"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat app:key="keep_screen_on" app:title="Keep screen always on" app:defaultValue="true" app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="🔒 Security &amp; system" app:iconSpaceReserved="false">
+        <EditTextPreference app:key="admin_pin" app:title="Admin PIN" app:defaultValue="1234" app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="start_on_boot"
+            app:title="Start clock automatically after reboot"
+            app:summary="For mosque / wall displays and TV boxes"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false" />
+        <Preference
+            app:key="exact_alarm"
+            app:title="⚠ Allow exact alarms"
+            app:summary="Needed so the azan plays exactly on time – tap to allow"
+            app:iconSpaceReserved="false" />
+        <Preference app:key="exit_app" app:title="Exit app" app:iconSpaceReserved="false" />
+        <Preference app:key="about" app:title="About" app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

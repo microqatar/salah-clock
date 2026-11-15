@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_default">#FF0B1220</color>
+    <color name="text_primary">#FFF2F4F8</color>
+    <color name="text_dim">#FF9AA4B2</color>
+    <color name="accent_default">#FFE6B450</color>
+    <color name="admin_primary">#FF13203A</color>
+</resources>

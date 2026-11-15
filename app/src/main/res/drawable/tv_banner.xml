@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp" android:height="180dp"
+    android:viewportWidth="320" android:viewportHeight="180">
+    <path android:fillColor="#0B1220" android:pathData="M0,0h320v180h-320z" />
+    <path android:fillColor="#13203A" android:pathData="M0,120h320v60h-320z" />
+    <!-- clock -->
+    <path android:strokeColor="#E6B450" android:strokeWidth="6" android:fillColor="#00000000"
+        android:pathData="M160,40a50,50 0,1 1,0 100a50,50 0,1 1,0 -100z" />
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="6" android:strokeLineCap="round"
+        android:pathData="M160,90L160,58M160,90L182,102" />
+    <!-- crescent -->
+    <path android:fillColor="#E6B450"
+        android:pathData="M220,25a18,18 0,1 0,18 23a14,14 0,1 1,-18 -23z" />
+    <!-- dome silhouettes -->
+    <path android:fillColor="#E6B450" android:fillAlpha="0.35"
+        android:pathData="M30,180v-40q20,-30 40,0v40zM250,180v-40q20,-30 40,0v40z" />
+</vector>
